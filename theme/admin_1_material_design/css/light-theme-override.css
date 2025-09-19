@@ -410,6 +410,7 @@ body,
 /* Page content area */
 .page-content {
     background-color: var(--metronic-page-content-bg) !important;
+    padding: 40px !important;
 }
 
 /* Page bar - same background as page-content, no border */
