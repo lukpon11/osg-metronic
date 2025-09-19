@@ -460,6 +460,11 @@ body,
     background-color: #fff !important;
 }
 
+/* Page wrapper - same background as page content */
+.page-wrapper {
+    background-color: var(--metronic-page-content-bg) !important;
+}
+
 /* Sidebar wrapper - maintain original positioning */
 .page-sidebar-wrapper {
     background-color: #fff !important;
