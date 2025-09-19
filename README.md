@@ -10,8 +10,10 @@ This project contains a customized version of the Metronic admin template with l
 - **Card Elements**: Removed box-shadows and added gray borders with 8px border-radius for modern look
 
 ### Files Modified
-- `theme/admin_1_material_design/index.html` - Updated to reference the light theme override
-- `theme/admin_1_material_design/css/light-theme-override.css` - Custom CSS overrides for light theme
+- `theme/admin_1_material_design/index.html` - Updated to reference the light theme override and OSG logos
+- `theme/assets/global/css/light-theme-override.css` - Custom CSS overrides for light theme
+- `theme/assets/layouts/layout/img/osg_logo.svg` - OSG logo (primary)
+- `theme/assets/layouts/layout/img/osg_logo2.svg` - OSG logo (secondary)
 
 ## 🚀 Getting Started
 
@@ -31,12 +33,15 @@ This project contains a customized version of the Metronic admin template with l
 osg-metronic/
 ├── theme/
 │   ├── admin_1_material_design/
-│   │   ├── index.html              # Main demo page with light theme
-│   │   └── css/
-│   │       └── light-theme-override.css  # Custom light theme styles
+│   │   └── index.html              # Main demo page with light theme
 │   ├── admin_1/                    # Original dark theme
 │   ├── admin_1_rounded/            # Rounded theme variant
 │   └── assets/                     # Shared assets and resources
+│       ├── global/css/
+│       │   └── light-theme-override.css  # Custom light theme styles
+│       └── layouts/layout/img/
+│           ├── osg_logo.svg        # OSG logo (primary)
+│           └── osg_logo2.svg       # OSG logo (secondary)
 ├── _documentation/                 # Template documentation
 ├── _start/                        # Getting started files
 └── README.md                      # This file
@@ -51,7 +56,7 @@ osg-metronic/
 
 ## 🛠️ Customization
 
-The light theme is implemented through a separate CSS override file (`css/light-theme-override.css`), making it easy to:
+The light theme is implemented through a separate CSS override file (`theme/assets/global/css/light-theme-override.css`), making it easy to:
 - Modify colors and styling
 - Add new customizations
 - Revert to original theme if needed
