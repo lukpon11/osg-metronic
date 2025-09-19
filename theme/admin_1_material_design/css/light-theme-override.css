@@ -13,7 +13,8 @@
     height: 50px;
     display: flex;
     align-items: center;
-    min-width: 200px;
+    min-width: 150px;
+    max-width: 250px;
 }
 
 .page-logo a {
@@ -21,13 +22,14 @@
     align-items: center;
     height: 100%;
     text-decoration: none;
+    width: 100%;
 }
 
 /* OSG Logo styling - Make it visible and properly sized */
 .page-logo .logo-default {
-    height: 40px;
+    height: 35px;
     width: auto;
-    max-width: 180px;
+    max-width: 100%;
     display: block;
     object-fit: contain;
 }
@@ -35,8 +37,9 @@
 /* Override SVG fill color to #060606 */
 .page-logo .logo-default svg {
     fill: #060606 !important;
-    height: 40px;
+    height: 35px;
     width: auto;
+    max-width: 100%;
 }
 
 /* Override all path elements within the SVG */
@@ -44,16 +47,11 @@
     fill: #060606 !important;
 }
 
-/* Ensure the SVG is visible */
+/* Ensure the SVG is visible and fits properly */
 .page-logo .logo-default svg {
     display: block;
     visibility: visible;
-}
-
-/* Debug: Add a temporary background to see if the logo area is working */
-.page-logo {
-    background-color: rgba(255, 0, 0, 0.1); /* Temporary red background for debugging */
-    border: 1px solid rgba(255, 0, 0, 0.3); /* Temporary red border for debugging */
+    object-fit: contain;
 }
 
 /* ============================================
