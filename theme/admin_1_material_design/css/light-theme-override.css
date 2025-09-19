@@ -327,6 +327,24 @@ input[type="reset"],
 }
 
 /* ============================================
+   PAGE TITLE STYLING
+   ============================================ */
+
+/* Page title styling */
+.page-title {
+    color: #060606 !important;
+    font-size: 28px !important;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* Page title small text */
+.page-title small {
+    color: #666666 !important;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* ============================================
    BACKGROUND COLORS
    ============================================ */
 
