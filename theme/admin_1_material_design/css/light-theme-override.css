@@ -581,14 +581,20 @@ input[type="reset"],
 
 /* Override all instances of #36c6d3 with new primary color */
 .badge-success,
-.label-success {
+.label-success,
+.badge-default,
+.badge-primary {
     background-color: var(--metronic-primary-rgb) !important;
 }
 
 .badge-success[href]:focus,
 .badge-success[href]:hover,
 .label-success[href]:focus,
-.label-success[href]:hover {
+.label-success[href]:hover,
+.badge-default[href]:focus,
+.badge-default[href]:hover,
+.badge-primary[href]:focus,
+.badge-primary[href]:hover {
     background-color: #2d5ce6 !important;
 }
 
