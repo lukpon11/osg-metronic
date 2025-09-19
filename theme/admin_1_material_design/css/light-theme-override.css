@@ -442,6 +442,15 @@ input[type="reset"],
 }
 
 /* ============================================
+   QUICK ACTIONS WIDGET COLORS
+   ============================================ */
+
+/* Replace old highlight color #78E0E8 with metronic-primary-color in Quick Actions */
+.mt-actions .mt-action .mt-action-body .mt-action-row .mt-action-info .mt-action-icon > i {
+    color: var(--metronic-primary-rgb) !important;
+}
+
+/* ============================================
    BACKGROUND COLORS
    ============================================ */
 
