@@ -244,6 +244,22 @@ input[type="reset"],
    LIGHT THEMED SIDEBAR MENU
    ============================================ */
 
+/* Remove borders from all navigation items */
+.page-sidebar .page-sidebar-menu li a,
+.page-sidebar .page-sidebar-menu li a:hover,
+.page-sidebar .page-sidebar-menu li a:focus,
+.page-sidebar .page-sidebar-menu li a:active,
+.page-sidebar .page-sidebar-menu .sub-menu li a,
+.page-sidebar .page-sidebar-menu .sub-menu li a:hover,
+.page-sidebar .page-sidebar-menu .sub-menu li a:focus,
+.page-sidebar .page-sidebar-menu .sub-menu li a:active,
+.navbar-nav > li > a,
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:active {
+    border: none !important;
+}
+
 /* Main sidebar background */
 .page-sidebar,
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover {
@@ -255,7 +271,7 @@ input[type="reset"],
 /* Sidebar menu items */
 .page-sidebar .page-sidebar-menu>li>a,
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a {
-    border-top: 1px solid #e7ecf1 !important;
+    border: none !important;
     color: #666666 !important;
 }
 
@@ -286,7 +302,7 @@ input[type="reset"],
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active.open>a,
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active>a {
     background: var(--metronic-primary-rgb) !important;
-    border-top-color: transparent !important;
+    border: none !important;
     color: #ffffff !important;
 }
 
