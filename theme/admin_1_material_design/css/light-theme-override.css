@@ -393,6 +393,15 @@ input[type="reset"],
     background-color: var(--metronic-primary-rgb) !important;
 }
 
+/* Make dashboard-stat numbers bold */
+.dashboard-stat .number,
+.dashboard-stat .number span,
+.dashboard-stat .details .number,
+.dashboard-stat .details .number span {
+    font-weight: bold !important;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
 /* ============================================
    BACKGROUND COLORS
    ============================================ */
