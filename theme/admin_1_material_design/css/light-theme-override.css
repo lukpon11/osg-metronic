@@ -60,6 +60,143 @@
 }
 
 /* ============================================
+   METRONIC CUSTOM STYLING
+   ============================================ */
+
+/* Metronic Primary Color - New Blue */
+:root {
+    --metronic-primary-rgb: #3874ff;
+    --metronic-primary-rgb-r: 56;
+    --metronic-primary-rgb-g: 116;
+    --metronic-primary-rgb-b: 255;
+    
+    /* Page Content Background */
+    --metronic-page-content-bg: #F5F7FA;
+}
+
+/* ============================================
+   NUNITO FONT IMPLEMENTATION
+   ============================================ */
+
+/* Import Nunito font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Apply Nunito font to text elements only - exclude icons */
+body,
+h1, h2, h3, h4, h5, h6,
+p, span:not([class*="icon"]):not([class*="fa"]):not([class*="glyphicon"]):not([class*="ion"]):not([class*="feather"]),
+div:not([class*="icon"]):not([class*="fa"]):not([class*="glyphicon"]):not([class*="ion"]):not([class*="feather"]),
+a:not([class*="icon"]):not([class*="fa"]):not([class*="glyphicon"]):not([class*="ion"]):not([class*="feather"]),
+li:not([class*="icon"]):not([class*="fa"]):not([class*="glyphicon"]):not([class*="ion"]):not([class*="feather"]),
+ul, ol,
+input, textarea, select,
+label, legend, fieldset,
+table, th, td, tr,
+.btn, button,
+.alert, .panel, .modal,
+.navbar, .nav, .breadcrumb,
+.pagination, .list-group,
+.form-control, .form-group {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Force icon fonts to use their proper font families */
+[class*="icon-"] {
+    font-family: 'Simple-Line-Icons' !important;
+}
+
+[class*="fa-"] {
+    font-family: 'FontAwesome' !important;
+}
+
+[class*="glyphicon"] {
+    font-family: 'Glyphicons Halflings' !important;
+}
+
+/* Force all i elements with icon classes to use proper fonts */
+i[class*="icon-"] {
+    font-family: 'Simple-Line-Icons' !important;
+}
+
+i[class*="fa-"] {
+    font-family: 'FontAwesome' !important;
+}
+
+i[class*="glyphicon"] {
+    font-family: 'Glyphicons Halflings' !important;
+}
+
+/* Specific icon classes that might be missing */
+.icon-magnet,
+.icon-bubbles,
+.icon-call-in,
+.icon-bell,
+i.icon-magnet,
+i.icon-bubbles,
+i.icon-call-in,
+i.icon-bell {
+    font-family: 'Simple-Line-Icons' !important;
+}
+
+/* Ensure all Simple Line Icons work - comprehensive approach */
+[class^="icon-"],
+[class*=" icon-"],
+i[class^="icon-"],
+i[class*=" icon-"] {
+    font-family: 'Simple-Line-Icons' !important;
+}
+
+/* Override any conflicting font rules for icons */
+.mt-action-icon i,
+.mt-action-icon [class*="icon-"],
+.page-sidebar i,
+.page-sidebar [class*="icon-"],
+.page-header i,
+.page-header [class*="icon-"] {
+    font-family: 'Simple-Line-Icons' !important;
+}
+
+/* Ensure all other i elements inherit proper fonts */
+i:not([class*="icon-"]):not([class*="fa-"]):not([class*="glyphicon"]) {
+    font-family: inherit !important;
+}
+
+/* Remove all uppercase transformations */
+h1, h2, h3, h4, h5, h6,
+.btn,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.nav-pills > li > a,
+.nav-tabs > li > a,
+.label,
+.badge,
+.alert,
+.panel-title,
+.portlet-title .caption,
+.widget-title,
+.table > thead > tr > th,
+.form-control,
+.control-label,
+.navbar-brand,
+.dropdown-menu > li > a,
+.breadcrumb > li,
+.pagination > li > a,
+.pagination > li > span,
+.list-group-item,
+.modal-title,
+.popover-title,
+.tooltip-inner,
+.help-block,
+.help-inline,
+.text-uppercase,
+.uppercase {
+    text-transform: none !important;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* ============================================
    LIGHT THEMED PAGE HEADER
    ============================================ */
 
@@ -67,6 +204,7 @@
 .page-header.navbar {
     background-color: #ffffff !important;
     border-bottom: 1px solid #e7ecf1 !important;
+    box-shadow: none !important;
 }
 
 /* Header menu icons */
@@ -110,6 +248,41 @@
 .page-sidebar,
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover {
     background-color: #f8f9fa !important;
+    border-right: 1px solid #e7ecf1 !important;
+    box-shadow: none !important;
+    min-height: 100vh !important;
+}
+
+/* Ensure sidebar menu takes full height without affecting layout */
+.page-sidebar .page-sidebar-menu {
+    min-height: calc(100vh - 60px) !important;
+}
+
+/* Ensure sidebar doesn't interfere with page content layout */
+.page-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 1000 !important;
+    width: 260px !important;
+}
+
+/* Ensure page content is properly positioned next to sidebar */
+.page-content-wrapper {
+    margin-left: 260px !important;
+    min-height: 100vh !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 991px) {
+    .page-sidebar {
+        position: relative !important;
+        width: 100% !important;
+    }
+    
+    .page-content-wrapper {
+        margin-left: 0 !important;
+    }
 }
 
 /* Sidebar menu items */
@@ -145,9 +318,14 @@
 .page-sidebar .page-sidebar-menu>li.active>a,
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active.open>a,
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active>a {
-    background: #36c6d3 !important;
+    background: var(--metronic-primary-rgb) !important;
     border-top-color: transparent !important;
     color: #ffffff !important;
+}
+
+/* Hide .selected element for active menu items */
+.page-sidebar .page-sidebar-menu>li.active .selected {
+    visibility: hidden !important;
 }
 
 /* Sidebar sub-menu items */
@@ -187,11 +365,32 @@
 
 /* Main page background colors */
 body,
-.page-content-wrapper,
-.page-container,
-.page-sidebar-wrapper,
 .page-footer {
     background-color: #fff !important;
+}
+
+/* Sidebar wrapper - maintain original positioning */
+.page-sidebar-wrapper {
+    background-color: #fff !important;
+}
+
+/* Page content background - Light gray */
+.page-content-wrapper,
+.page-container {
+    background-color: var(--metronic-page-content-bg) !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Page content area */
+.page-content {
+    background-color: var(--metronic-page-content-bg) !important;
+}
+
+/* Page bar - same background as page-content, no border */
+.page-bar {
+    background-color: var(--metronic-page-content-bg) !important;
+    border-bottom: none !important;
 }
 
 /* ============================================
@@ -278,6 +477,233 @@ input[type="reset"],
 /* Portlet body styling */
 .page-content .portlet .portlet-body {
     border-radius: 0 0 8px 8px !important;
+}
+
+
+/* ============================================
+   METRONIC PRIMARY COLOR OVERRIDES
+   ============================================ */
+
+/* Override all instances of #36c6d3 with new primary color */
+.badge-success,
+.label-success {
+    background-color: var(--metronic-primary-rgb) !important;
+}
+
+.badge-success[href]:focus,
+.badge-success[href]:hover,
+.label-success[href]:focus,
+.label-success[href]:hover {
+    background-color: #2d5ce6 !important;
+}
+
+/* Text colors */
+.text-success {
+    color: var(--metronic-primary-rgb) !important;
+}
+
+/* Icon states */
+.icon-state-success {
+    color: var(--metronic-primary-rgb) !important;
+}
+
+/* Form states */
+.has-success .input-icon>i {
+    color: var(--metronic-primary-rgb) !important;
+}
+
+.form-group.form-md-line-input .form-control.edited:not([readonly])~.help-block,
+.form-group.form-md-line-input .form-control:focus:not([readonly])~.help-block {
+    color: var(--metronic-primary-rgb) !important;
+}
+
+/* Checkboxes and radios */
+.form-md-checkboxes.has-success label {
+    color: var(--metronic-primary-rgb) !important;
+}
+
+.form-md-radios.has-success label {
+    color: var(--metronic-primary-rgb) !important;
+}
+
+/* Progress bars */
+.progress-bar-success {
+    background-color: var(--metronic-primary-rgb) !important;
+}
+
+/* Alerts */
+.alert-success {
+    background-color: rgba(56, 116, 255, 0.1) !important;
+    border-color: var(--metronic-primary-rgb) !important;
+    color: var(--metronic-primary-rgb) !important;
+}
+
+/* Buttons */
+.btn-success {
+    background-color: var(--metronic-primary-rgb) !important;
+    border-color: var(--metronic-primary-rgb) !important;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    background-color: #2d5ce6 !important;
+    border-color: #2d5ce6 !important;
+}
+
+/* Navigation */
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus {
+    background-color: var(--metronic-primary-rgb) !important;
+}
+
+/* Tabs */
+.tabbable-line>.nav-tabs>li.active>a {
+    border-bottom: 2px solid var(--metronic-primary-rgb) !important;
+}
+
+/* Tables */
+.table-advance td.highlight div.success {
+    border-left: 2px solid var(--metronic-primary-rgb) !important;
+}
+
+/* Ribbons */
+.mt-element-ribbon .ribbon.ribbon-color-success {
+    background-color: var(--metronic-primary-rgb) !important;
+}
+
+.mt-element-ribbon .ribbon.ribbon-color-success>.ribbon-sub {
+    background-color: var(--metronic-primary-rgb) !important;
+}
+
+/* Cards */
+.mt-element-card .mt-card-item .mt-card-content .mt-card-social>ul>li>a.mt-card-btn:hover {
+    color: var(--metronic-primary-rgb) !important;
+}
+
+/* Form wizard */
+.form-wizard .steps>li.active>a.step .number {
+    background-color: var(--metronic-primary-rgb) !important;
+}
+
+/* DataTables */
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+    background-color: var(--metronic-primary-rgb) !important;
+}
+
+/* Calendar */
+.portlet.calendar.light .fc-button.fc-state-active {
+    background-color: var(--metronic-primary-rgb) !important;
+}
+
+/* NoUI Slider */
+.noUi-success .noUi-connect {
+    background: var(--metronic-primary-rgb) !important;
+}
+
+/* Bootstrap Switch */
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success {
+    background: var(--metronic-primary-rgb) !important;
+}
+
+/* ============================================
+   NUNITO FONT SPECIFIC OVERRIDES
+   ============================================ */
+
+/* Override Metronic specific uppercase elements */
+.page-sidebar .page-sidebar-menu > li.heading > h3 {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* Override table headers that might be uppercase */
+.table > thead > tr > th {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: normal !important;
+}
+
+/* Override form labels */
+.form-group label,
+.control-label {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+/* Override button text */
+.btn,
+.btn-sm,
+.btn-lg,
+.btn-xs {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+/* Override navigation elements */
+.navbar-nav > li > a {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+/* Override breadcrumbs */
+.breadcrumb > li {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+/* Override pagination */
+.pagination > li > a,
+.pagination > li > span {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+/* Override alerts */
+.alert {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+/* Override labels and badges */
+.label,
+.badge {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+/* Override modal titles */
+.modal-title {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* Override panel titles */
+.panel-title {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* Override portlet titles */
+.portlet-title .caption {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* Override widget titles */
+.widget-title {
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 600 !important;
 }
 
 /* ============================================
