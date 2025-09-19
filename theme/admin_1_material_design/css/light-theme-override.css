@@ -1,0 +1,199 @@
+/**
+ * Light Theme Override CSS
+ * This file contains custom styles to override the dark theme with a light theme
+ * for the admin_1_material_design template.
+ */
+
+/* ============================================
+   LIGHT THEMED PAGE HEADER
+   ============================================ */
+
+/* Main header background and border */
+.page-header.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e7ecf1 !important;
+}
+
+/* Header menu icons */
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-toggle>i {
+    color: #666666 !important;
+}
+
+/* Header menu hover states */
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-toggle:hover,
+.page-header.navbar .top-menu .navbar-nav>li.dropdown.open .dropdown-toggle {
+    background-color: #f5f5f5 !important;
+}
+
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-toggle:hover>i,
+.page-header.navbar .top-menu .navbar-nav>li.dropdown.open .dropdown-toggle>i {
+    color: #333333 !important;
+}
+
+/* Header user menu and language selector */
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-language>.dropdown-toggle>.langname,
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-user>.dropdown-toggle>.username,
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-user>.dropdown-toggle>i {
+    color: #666666 !important;
+}
+
+/* Header menu toggler (hamburger menu) */
+.page-header.navbar .menu-toggler>span,
+.page-header.navbar .menu-toggler>span:after,
+.page-header.navbar .menu-toggler>span:before,
+.page-header.navbar .menu-toggler>span:hover,
+.page-header.navbar .menu-toggler>span:hover:after,
+.page-header.navbar .menu-toggler>span:hover:before {
+    background: #666666 !important;
+}
+
+/* ============================================
+   LIGHT THEMED SIDEBAR MENU
+   ============================================ */
+
+/* Main sidebar background */
+.page-sidebar,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover {
+    background-color: #f8f9fa !important;
+}
+
+/* Sidebar menu items */
+.page-sidebar .page-sidebar-menu>li>a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a {
+    border-top: 1px solid #e7ecf1 !important;
+    color: #666666 !important;
+}
+
+/* Sidebar menu icons */
+.page-sidebar .page-sidebar-menu>li>a>i,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a>i {
+    color: #999999 !important;
+}
+
+/* Sidebar headings */
+.page-sidebar .page-sidebar-menu>li.heading>h3,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.heading>h3 {
+    color: #888888 !important;
+}
+
+/* Sidebar menu hover states */
+.page-sidebar .page-sidebar-menu>li.open>a,
+.page-sidebar .page-sidebar-menu>li:hover>a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.open>a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li:hover>a {
+    background: #e7ecf1 !important;
+    color: #333333 !important;
+}
+
+/* Sidebar active menu items */
+.page-sidebar .page-sidebar-menu>li.active.open>a,
+.page-sidebar .page-sidebar-menu>li.active>a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active.open>a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active>a {
+    background: #36c6d3 !important;
+    border-top-color: transparent !important;
+    color: #ffffff !important;
+}
+
+/* Sidebar sub-menu items */
+.page-sidebar .page-sidebar-menu .sub-menu>li>a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu>li>a {
+    color: #666666 !important;
+}
+
+.page-sidebar .page-sidebar-menu .sub-menu>li>a>i,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu>li>a>i {
+    color: #999999 !important;
+}
+
+/* Sidebar sub-menu hover states */
+.page-sidebar .page-sidebar-menu .sub-menu>li.active>a,
+.page-sidebar .page-sidebar-menu .sub-menu>li.open>a,
+.page-sidebar .page-sidebar-menu .sub-menu>li:hover>a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu>li.active>a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu>li.open>a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu>li:hover>a {
+    background: #e7ecf1 !important;
+}
+
+/* Sidebar search input */
+.page-sidebar .sidebar-search .input-group {
+    border-bottom: 1px solid #e7ecf1 !important;
+}
+
+.page-sidebar .sidebar-search .input-group .form-control {
+    background-color: #ffffff !important;
+    color: #666666 !important;
+}
+
+/* ============================================
+   CARD ELEMENTS STYLING
+   ============================================ */
+
+/* Remove box-shadows and add gray border with 8px border-radius for card elements */
+.page-content .portlet,
+.page-content .dashboard-stat,
+.page-content .portlet.light,
+.page-content .portlet.bordered {
+    box-shadow: none !important;
+    border: 1px solid #e7ecf1 !important;
+    border-radius: 8px !important;
+}
+
+/* Portlet title styling */
+.page-content .portlet .portlet-title {
+    border-bottom: 1px solid #e7ecf1 !important;
+}
+
+/* Portlet body styling */
+.page-content .portlet .portlet-body {
+    border-radius: 0 0 8px 8px !important;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* Mobile sidebar adjustments */
+@media (max-width: 991px) {
+    .page-sidebar {
+        background-color: #f8f9fa !important;
+    }
+    
+    .page-sidebar .page-sidebar-menu>li>a {
+        border-top: 1px solid #e7ecf1 !important;
+    }
+    
+    .page-sidebar .page-sidebar-menu>li.open>a,
+    .page-sidebar .page-sidebar-menu>li:hover>a {
+        background: #e7ecf1 !important;
+    }
+    
+    .page-sidebar .page-sidebar-menu .sidebar-search input,
+    .page-sidebar .page-sidebar-menu>li .sub-menu {
+        background-color: #f8f9fa !important;
+    }
+}
+
+/* Mobile header adjustments */
+@media (max-width: 480px) {
+    .page-header.navbar .top-menu {
+        background-color: #ffffff !important;
+    }
+    
+    .page-header-fixed-mobile .page-header.navbar .top-menu {
+        background-color: #ffffff !important;
+    }
+    
+    .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-toggle {
+        background-color: #f5f5f5 !important;
+    }
+    
+    .page-header-fixed-mobile .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-toggle {
+        background: transparent !important;
+    }
+    
+    .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-toggle:hover {
+        background-color: #e7ecf1 !important;
+    }
+}
