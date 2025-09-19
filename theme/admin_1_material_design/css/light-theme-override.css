@@ -127,6 +127,17 @@
 }
 
 /* ============================================
+   BACKGROUND COLORS
+   ============================================ */
+
+/* Main page background colors */
+.page-content-wrapper,
+.page-container,
+.page-sidebar-wrapper {
+    background-color: #fff !important;
+}
+
+/* ============================================
    CARD ELEMENTS STYLING
    ============================================ */
 
