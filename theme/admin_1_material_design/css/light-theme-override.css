@@ -345,6 +345,32 @@ input[type="reset"],
 }
 
 /* ============================================
+   DASHBOARD STAT COLORS
+   ============================================ */
+
+/* Replace all dashboard-stat background colors with metronic-primary-color */
+.dashboard-stat.blue,
+.dashboard-stat.red,
+.dashboard-stat.green,
+.dashboard-stat.purple,
+.dashboard-stat.dashboard-stat-v2.blue,
+.dashboard-stat.dashboard-stat-v2.red,
+.dashboard-stat.dashboard-stat-v2.green,
+.dashboard-stat.dashboard-stat-v2.purple,
+.dashboard-stat[class*="blue"],
+.dashboard-stat[class*="red"],
+.dashboard-stat[class*="green"],
+.dashboard-stat[class*="purple"],
+.dashboard-stat[class*="yellow"],
+.dashboard-stat[class*="grey"],
+.dashboard-stat[class*="gray"],
+.dashboard-stat.default,
+.dashboard-stat.dark,
+.dashboard-stat.white {
+    background-color: var(--metronic-primary-rgb) !important;
+}
+
+/* ============================================
    BACKGROUND COLORS
    ============================================ */
 
