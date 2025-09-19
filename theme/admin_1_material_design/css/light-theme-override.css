@@ -131,9 +131,11 @@
    ============================================ */
 
 /* Main page background colors */
+body,
 .page-content-wrapper,
 .page-container,
-.page-sidebar-wrapper {
+.page-sidebar-wrapper,
+.page-footer {
     background-color: #fff !important;
 }
 
