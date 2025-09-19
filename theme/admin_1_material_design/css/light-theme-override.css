@@ -34,6 +34,11 @@
     object-fit: contain;
 }
 
+/* Override margin-top from original CSS */
+.page-header.navbar .page-logo .logo-default {
+    margin-top: 8px !important;
+}
+
 /* Override SVG fill color to #060606 */
 .page-logo .logo-default svg {
     fill: #060606 !important;
