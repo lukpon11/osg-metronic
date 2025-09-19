@@ -140,6 +140,68 @@ body,
 }
 
 /* ============================================
+   REMOVE BOX-SHADOWS AND STYLE BUTTONS
+   ============================================ */
+
+/* Remove all box-shadows globally */
+*,
+*:before,
+*:after {
+    box-shadow: none !important;
+}
+
+/* Remove box-shadows from specific elements */
+.btn,
+.badge,
+.portlet,
+.dashboard-stat,
+.dropdown-menu,
+.modal,
+.panel,
+.alert,
+.thumbnail,
+.navbar,
+.list-group,
+.well,
+.input-group,
+.form-control,
+.table,
+.card,
+.widget,
+.tile,
+.portlet.light,
+.portlet.bordered {
+    box-shadow: none !important;
+}
+
+/* Apply 8px border radius to all buttons */
+.btn,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn-group .btn,
+.btn-group-vertical .btn,
+.btn-toolbar .btn,
+.btn-group > .btn,
+.btn-group-vertical > .btn {
+    border-radius: 8px !important;
+}
+
+/* Apply 8px border radius to button groups */
+.btn-group,
+.btn-group-vertical,
+.btn-toolbar .btn-group {
+    border-radius: 8px !important;
+}
+
+/* Apply 8px border radius to badges */
+.badge,
+.label {
+    border-radius: 8px !important;
+}
+
+/* ============================================
    CARD ELEMENTS STYLING
    ============================================ */
 
